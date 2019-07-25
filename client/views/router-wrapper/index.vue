@@ -50,7 +50,7 @@ export default {
     },
     load(pkg) {
       console.log(pkg)
-      return new Promise((resolve, reject) => {
+      return new Promise((resolve, reject) => { // eslint-disable-line
         const styles = pkg.filter(p => p.type === 'style')
         styles.forEach(({ url }) => {
           const link = document.createElement('link')
