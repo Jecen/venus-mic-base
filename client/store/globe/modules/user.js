@@ -20,7 +20,7 @@ export const api = {
 
 // 初始化store对象
 const state = {
-  userInfo: {},
+  userInfo: { name: 'aaa', age: 18 },
   token: '',
   rememberInfo: {
     username: '',
@@ -29,14 +29,7 @@ const state = {
   config: {},
   enterType: 'byLogin',
   permission: {
-    '/one': [
-      { type: 'script', url: 'http://localhost:6001/static/client.b956cdb.js' },
-      { type: 'style', url: 'http://localhost:6001/static/style/client.b27798ac.css' },
-    ],
-    '/two': [
-      { type: 'script', url: 'xxx' },
-    ],
-    '/three': null,
+
   },
 }
 
@@ -165,6 +158,9 @@ const mutations = {
   },
   setConf(state, conf) {
     state.config = conf
+  },
+  updatePermission(state, permission) {
+    state.permission = permission
   },
 }
 

@@ -9,9 +9,6 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [{
-    path: '/one',
-    component: RouterWrapper,
-  }, {
     path: '/login',
     component: Login,
   }, {
@@ -20,5 +17,5 @@ export default new Router({
   }, {
     path: '*',
     component: RouterWrapper,
-  } ],
+  }],
 })
